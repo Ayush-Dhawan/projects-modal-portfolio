@@ -6,7 +6,7 @@
     <title>Bootstrap demo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   </head>
-  <body style="background-color: black; overflow: hidden">
+  <body style="background-color: rgb(5, 6, 24); overflow: hidden">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Teko:wght@700&display=swap');
@@ -35,35 +35,27 @@
             transform: scale(1.05);
             cursor: pointer;
         }
-        @media (max-width: 1053px){
-            .project-btn-container{
-                display: block;
-                width: 80vw;
-                font-size: 1.5rem;
-            }
-        }
     </style>
     <!-- Button trigger modal -->
 <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
     Launch static backdrop modal
   </button> -->
 
-<center>
-    <div class="project-btn-container">
-        <div class="project-btn"  data-bs-toggle="modal" data-bs-target="#exampleModal"><center>Web Development <br>Projects</center></div>
-        <div class="project-btn"><center>AI/ML <br> Projects</center></div>
-      </div>    
-</center>
+  <div class="project-btn-container">
+    <div class="project-btn"  data-bs-toggle="modal" data-bs-target="#exampleModal"><center>Web Development <br>Projects</center></div>
+    <div class="project-btn"><center>AI/ML <br> Projects</center></div>
+  </div>
+  
   <!-- Modal -->
 
   <!-- Full screen modal -->
-  <div style="overflow: hidden; background-color: rgb(5, 6, 24);" class="modal modal-fullscreen" id="exampleModal"  tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div style="overflow: hidden; background-color: rgb(5, 6, 24);" class="modal-dialog modal-fullscreen" style="width: 100vw;">
-        <div class="modal-content bg-dark" style="overflow: hidden;">
-            <!-- <div class="modal-header" style="background-color: rgb(5, 6, 24);">
-                <h1 style="color: gray;" class="modal-title fs-5" id="exampleModalLabel">Web-Development Projects</h1>
-              <button type="button" style="color: wheat;" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div> -->
+  <div style="overflow: hidden; background-color: rgb(5, 6, 24); z-index: 100000;" class="modal modal-fullscreen" id="exampleModal"  tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div style="overflow: hidden; background-color: rgb(5, 6, 24); z-index: 100000;" class="modal-dialog modal-fullscreen" style="width: 100vw;">
+        <div class="modal-content bg-dark" style="overflow: hidden; z-index: 100000;">
+            <div class="modal-header" style="background-color: rgb(5, 6, 24); z-index: 100000;">
+                <h1 style="color: gray; z-index: 100000;" class="modal-title fs-5" id="exampleModalLabel">Web-Development Projects</h1>
+              <button type="button" style="color: wheat; z-index: 100000;" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
             <div class="modal-body " style="overflow: hidden; background-color: rgb(5, 6, 24);">
               <iframe
                 src="https://ayush-dhawan.github.io/portfolioProjects/"
@@ -72,9 +64,6 @@
                 height="100%"
                 style="border: none;"
               ></iframe>
-            </div>
-            <div class="modal-footer" style="background-color: rgb(5, 6, 24);">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close Web Projects</button>
             </div>
           </div>
     </div>
@@ -86,7 +75,29 @@
   </button>
   
   <!-- Modal -->
-  
+  <div class="modal fade modal-fullscreen" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+              <!-- <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1> -->
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <!-- <iframe
+                src="https://ayush-dhawan.github.io/portfolioProjects/"
+                title="Iframe Example"
+                width="100%"
+                height="100%"
+                style="border: none;"
+              ></iframe> -->
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Understood</button>
+            </div>
+          </div>
+    </div>
+  </div>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
   
