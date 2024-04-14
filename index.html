@@ -6,51 +6,61 @@
     <title>Bootstrap demo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   </head>
-  <body style="background-color: rgb(5, 6, 24); overflow: hidden">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@700&display=swap');
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Teko:wght@700&display=swap');
+    .project-btn-container{
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .project-btn{
+        height: 70vh;
+        width: 50vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 2rem;
+        background-color: #00C1FE;
+        font-size: 3rem;
+        font-family: 'Bebas Neue', sans-serif;
+        border-radius: 20px;
+        transition: transform 0.3s ease-in-out;
+        font-weight: 900;
+    }
+    .project-btn:hover{
+        transform: scale(1.05);
+        cursor: pointer;
+    }
+    body::-webkit-scrollbar {
+  width: 0; /* Change the width as needed */
+}
+
+body::-webkit-scrollbar-thumb {
+  width: 0; /* Set thumb width to 0 to hide it */
+}
+
+    @media (max-width: 1053px){
         .project-btn-container{
-            height: 100vh;
-            width: 100vw;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            display: block;
+            width: 80vw;
+            font-size: 1.5rem;
+            height: 200vh;
         }
         .project-btn{
-            height: 70vh;
-            width: 50vw;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 2rem;
-            background-color: #00C1FE;
-            font-size: 3rem;
-            font-family: 'Bebas Neue', sans-serif;
-            border-radius: 20px;
-            transition: transform 0.3s ease-in-out;
-            font-weight: 900;
+          width: 70vw;
         }
-        .project-btn:hover{
-            transform: scale(1.05);
-            cursor: pointer;
-        }
-        @media (max-width: 1053px){
-            .project-btn-container{
-                display: block;
-                width: 80vw;
-                font-size: 1.5rem;
-            }
-            .project-btn{
-              width: 70vw;
-            }
-        }
-        @media (max-width: 600px){
-          .project-btn{
-            font-size: 2rem;
-          }
-        }
-    </style>
+    }
+    @media (max-width: 600px){
+      .project-btn{
+        font-size: 2rem;
+      }
+    }
+</style>
+  <body style="background-color: rgb(5, 6, 24); overflow: scroll">
+    
     <!-- Button trigger modal -->
 <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
     Launch static backdrop modal
@@ -59,8 +69,10 @@
 <center>
     <div class="project-btn-container" style="background-color: rgb(5, 6, 24);">
         <div class="project-btn"  data-bs-toggle="modal" data-bs-target="#exampleModal"><center>Web Development <br>Projects</center></div>
-        <!-- <div class="project-btn"><center>AI/ML <br> Projects</center></div> -->
+        
+        <div class="project-btn"  data-bs-toggle="modal" data-bs-target="#exampleModal2"><center>App Development <br>Projects</center></div>
       </div>    
+       
 </center>
   <!-- Modal -->
 
@@ -88,10 +100,31 @@
     </div>
   </div>
 
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="">
-    Launch demo modal
-  </button>
+  <!-- Full screen modal app dev -->
+  <div style="overflow: hidden; background-color: rgb(5, 6, 24);" class="modal modal-fullscreen" id="exampleModal2"  tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div style="overflow: hidden; background-color: rgb(5, 6, 24);" class="modal-dialog modal-fullscreen" style="width: 100vw;">
+        <div class="modal-content bg-dark" style="overflow: hidden;">
+            <!-- <div class="modal-header" style="background-color: rgb(5, 6, 24);">
+                <h1 style="color: gray;" class="modal-title fs-5" id="exampleModalLabel">Web-Development Projects</h1>
+              <button type="button" style="color: wheat;" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div> -->
+            <div class="modal-body " style="overflow: hidden; background-color: rgb(5, 6, 24);">
+              <iframe
+                src="https://ayush-dhawan.github.io/portfolio_projects_app/"
+                title="Iframe Example"
+                width="100%"
+                height="100%"
+                style="border: none;"
+              ></iframe>
+            </div>
+            <div class="modal-footer" style="background-color: rgb(5, 6, 24);">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close app Projects</button>
+            </div>
+          </div>
+    </div>
+  </div>
+
+
   
   <!-- Modal -->
   
